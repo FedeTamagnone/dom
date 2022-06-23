@@ -1,4 +1,6 @@
 const carritoFinal = []
+const calcularTotal = document.querySelector("#calcular")
+
 
 function producto() {
     let listado = prompt("¿Qué producto quiere llevar?: \n 1- Jabon $10 \n 2- Crema $20 \n 3- Peine $30")
@@ -61,7 +63,8 @@ for (const producto of carritoFinal) {
 
     document.body.append(totalCompra);
 }
-
+calcularTotal.addEventListener("click", () =>{
 const precioFinalCompra = document.createElement("div");
 precioFinalCompra.innerHTML = `<h3> El total de su compra es de: $ ${precioFinal}`
 document.body.append(precioFinalCompra);
+})
